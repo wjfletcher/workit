@@ -188,7 +188,7 @@ SignalException:
 SpecialGlobalVars:
   Enabled: false
 
-StringLiterals:
+Style/StringLiterals:
   Enabled: false
 
 VariableInterpolation:
@@ -242,6 +242,9 @@ LiteralInCondition:
   Enabled: false
 
 LiteralInInterpolation:
+  Enabled: false
+
+Style/StringLiteralsInInterpolation
   Enabled: false
 
 Loop:
