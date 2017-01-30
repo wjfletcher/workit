@@ -1,16 +1,5 @@
 <h1>This is the home page</h1>
 
-<% if user_signed_in? %>
-  <a href="#"><%= current_user.username %></a>
-<% else %>
-  <a href="#">Account</a>
-<% end %>
-<ul class="menu vertical">
-  <% if user_signed_in? %>
-    <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
-    
-    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-  <% else %>
-    <li><%= link_to "Sign up", new_user_registration_path, :class => ''  %></li>
-    <li><%= link_to "Login", new_user_session_path, :class => ''  %></li>
-  <% end %>
+<div id="header">
+khqwfdl;askjdfalskdfj
+</div>

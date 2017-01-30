@@ -4,14 +4,38 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "WorkIt" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-
   <body>
+
+    <div class="top-bar">
+        <div class="top-bar-title">
+          <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+            <button class="menu-icon dark" type="button" data-toggle></button>
+          </span>
+          <%= link_to 'WorkIt', root_path %>
+        </div>
+        <div id="responsive-menu">
+          <div class="top-bar-right">
+            <ul class="menu horizontal">
+              <% if user_signed_in? %>
+                <li><a href="#"><%= current_user.username %></a></li>
+                <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+                <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to "Sign up", new_user_registration_path %></li>
+                <li><%= link_to "Login", new_user_session_path %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
     <% if notice %>
         <div class="callout small secondary">
           <%= notice %>
