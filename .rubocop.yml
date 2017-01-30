@@ -244,6 +244,9 @@ LiteralInCondition:
 LiteralInInterpolation:
   Enabled: false
 
+Style/StringLiteralsInInterpolation
+  Enabled: false
+
 Loop:
   Enabled: false
 
