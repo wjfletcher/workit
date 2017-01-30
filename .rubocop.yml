@@ -244,7 +244,7 @@ LiteralInCondition:
 LiteralInInterpolation:
   Enabled: false
 
-Style/StringLiteralsInInterpolation
+Style/StringLiteralsInInterpolation:
   Enabled: false
 
 Loop:

@@ -21,6 +21,7 @@ feature 'user signs in' do
     expect(page).to have_content("signed up successfully")
     expect(page).to have_content("Logout")
     click_link 'Logout'
+    expect(page).to have_content("Login")
     click_link 'Login'
     fill_in 'Email', with: 'user@example.com'
     fill_in 'Password', with: 'password'
