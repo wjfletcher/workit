@@ -8,7 +8,6 @@ feature "user sees previous workouts" do
     exercise = Exercise.create(name: "curls", description: "curl the weights", category: "arms")
 
     visit root_path
-    binding.pry
     expect(page).to have_content('Login')
     click_link 'Login'
     fill_in 'Email', with: 'user@example.com'
