@@ -12,7 +12,37 @@
   </head>
   <body>
 
-    <div class="top-bar">
+    <div class="top-bar-container" data-sticky-container>
+    <div class="sticky" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+      <div class="top-bar">
+        <div class="row column">
+          <div class="top-bar-title">
+            <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+              <button class="menu-icon dark" type="button" data-toggle></button>
+            </span>
+            <%= link_to 'WorkIt', root_path %>
+          </div>
+
+          <div id="responsive-menu">
+            <div class="top-bar-right">
+              <ul class="menu horizontal">
+                <% if user_signed_in? %>
+                  <li><a href="#"><%= current_user.username %></a></li>
+                  <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+                  <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+                <% else %>
+                  <li><%= link_to "Sign up", new_user_registration_path %></li>
+                  <li><%= link_to "Login", new_user_session_path %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- <div class="top-bar-container" data-sticky-container>
+      <nav class="top-bar" data-topbar role="navigation">
         <div class="top-bar-title">
           <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
             <button class="menu-icon dark" type="button" data-toggle></button>
@@ -33,8 +63,8 @@
             </ul>
           </div>
         </div>
-      </div>
-
+      </nav>
+    </div> -->
 
     <% if notice %>
         <div class="callout small secondary">
