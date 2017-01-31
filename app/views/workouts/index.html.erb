@@ -1,0 +1,11 @@
+<h1>Your Workouts</h1>
+<% if @workouts.empty? %>
+  You haven't added any workouts yet
+<% else %>
+  <% @workouts.each do |workout| %>
+    <%= workout.exercise.name %>
+    <%= workout.date %>
+  <% end %>
+<% end %>
+<br>
+<%= link_to 'Add a workout', new_workout_path %>

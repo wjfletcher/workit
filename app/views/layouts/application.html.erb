@@ -27,7 +27,7 @@
             <div class="top-bar-right">
               <ul class="menu horizontal">
                 <% if user_signed_in? %>
-                  <li><a href="#"><%= current_user.username %></a></li>
+                  <li><%= link_to current_user.username, workouts_path %></li>
                   <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
                   <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
                 <% else %>
