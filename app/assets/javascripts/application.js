@@ -16,3 +16,13 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+window.onload = function() {
+	let el = document.getElementById("header");
+	let speed = 2;
+
+	document.addEventListener("scroll", function() {
+		let yPos = -(window.pageYOffset / speed);
+		el.style.backgroundPosition = "50% " + yPos + "px";
+	});
+};
