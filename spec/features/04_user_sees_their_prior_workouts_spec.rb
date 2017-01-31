@@ -5,7 +5,7 @@ feature "user sees previous workouts" do
 
     user1 = User.create(username: "user", email: "user@example.com", password: "password")
 
-    exercise = Exercise.create(name: "curls", description: "curl the weights", category: "arms")
+    Exercise.create(name: "curls", description: "curl the weights", category: "arms")
 
     visit root_path
     expect(page).to have_content('Login')
@@ -14,7 +14,8 @@ feature "user sees previous workouts" do
     fill_in 'Password', with: 'password'
     click_button 'Log in'
     click_link user1.username
-    # expect(page).to have_content("Your Workouts")
+    expect(page).to have_content("Your Workouts")
+    expect(page).to have_content("curls")
     click_link 'Add exercise'
     expect(page).to have_content("New exercise")
   end
