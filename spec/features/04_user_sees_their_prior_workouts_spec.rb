@@ -16,7 +16,7 @@ feature "user sees previous workouts" do
     click_link user1.username
     expect(page).to have_content("Your Workouts")
     expect(page).to have_content("curls")
-    click_link 'Add exercise'
+    click_link 'Add a workout'
     expect(page).to have_content("New exercise")
   end
 end
