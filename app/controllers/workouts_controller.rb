@@ -1,7 +1,7 @@
 class WorkoutsController < ApplicationController
 
   def index
-    @workouts = Workout.order("date DESC")
+    @workouts = Workout.where(user_id: current_user.id).order(date: :desc)
   end
 
   def new
