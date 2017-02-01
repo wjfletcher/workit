@@ -1,16 +1,21 @@
+<div class="row text-center">
 <h1>Your Workouts</h1>
 
-<%  date = 1.day.from_now(@workouts.first.date.to_date) rescue nil # increment the day
-  @workouts.each do |workout|
-    if date > workout.date.to_date
-      date = workout.date.to_date %>
-      <div style="background: #81BEF7;margin-top: 5px; margin-bottom: 5px;" class="rounded"><b><span style="padding: 5px"><%=h date %></span></b></div>
+<div class="callout workouts">
+<%  date = 1.day.from_now(@workouts.first.date.to_date) rescue nil # increment the day %>
+
+  <% @workouts.each do |workout| %>
+    <% if date > workout.date.to_date %>
+      <% date = workout.date.to_date %>
+      <div style="background: #F95738;margin-top: 5px; margin-bottom: 5px;" class="rounded"><b><span style="padding: 5px"><%=h date %></span></b></div>
     <%end%>
+
     <p>
        <%= link_to "#{workout.exercise.name}", workouts_path %><br>
     </p>
-
 <%  end # end for items_each%>
+</div>
 
 
 <%= link_to 'Add a workout', new_workout_path %>
+</div>
