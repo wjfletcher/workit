@@ -2,6 +2,12 @@ class WorkoutsController < ApplicationController
 
   def index
     @workouts = Workout.where(user_id: current_user.id).order(date: :desc)
+    @exercises = Exercise.all
+
+      respond_to do |format|
+        format.html
+        format.json { render json: @exercises }
+      end
   end
 
   def new
