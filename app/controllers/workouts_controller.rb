@@ -1,7 +1,7 @@
 class WorkoutsController < ApplicationController
 
   def index
-    @workouts = Workout.all
+    @workouts = Workout.where(user_id: current_user.id).order(date: :desc)
   end
 
   def new
@@ -14,7 +14,7 @@ class WorkoutsController < ApplicationController
     @workout.user_id = current_user.id
     if @workout.save
       flash[:notice] = ("workout added successfully.")
-      redirect_to workout_path
+      redirect_to workouts_path
     else
       flash[:notice] = @workout.errors.full_messages.to_sentence
       render :new
