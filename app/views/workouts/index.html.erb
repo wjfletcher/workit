@@ -16,11 +16,8 @@
       date = workout.date.to_date %>
       <div style="background: #81BEF7;margin-top: 5px; margin-bottom: 5px;" class="rounded"><b><span style="padding: 5px"><%=h date %></span></b></div>
     <%end%>
-
     <p>
-
        <%= link_to "#{workout.exercise.name}", workouts_path %><br>
-      
     </p>
 
 <%  end # end for items_each%>

@@ -1,13 +1,7 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'user signs in' do
-  let(:user) do
-    User.create(
-      username: "user",
-      email: "user@example.com",
-      password: "password"
-    )
-  end
+
 
   scenario 'user signs up and logs in with required information' do
     visit root_path
@@ -21,6 +15,7 @@ feature 'user signs in' do
     expect(page).to have_content("signed up successfully")
     expect(page).to have_content("Logout")
     click_link 'Logout'
+    visit root_path
     expect(page).to have_content("Login")
     click_link 'Login'
     fill_in 'Email', with: 'user@example.com'

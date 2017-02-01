@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'user signs out' do
   let(:user) do
@@ -23,5 +23,6 @@ feature 'user signs out' do
 
     expect(page).to have_content("Signed out successfully")
     expect(page).to have_content("Login")
+    click_link 'Login'
   end
 end
