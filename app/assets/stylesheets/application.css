@@ -60,7 +60,7 @@ html {
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
-  background-color: rgba(52, 84, 209, 1);
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .callout {

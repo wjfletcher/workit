@@ -2,8 +2,9 @@ class Api::V1::WorkoutsController < ApplicationController
 
   def index
     @workouts = Workout.where(user_id: current_user.id).order(date: :desc)
+    @formauth = form_authenticity_token
     @exercises = Exercise.all
-    render json: {exercises: @exercises, workouts: @workouts}
+    render json: {exercises: @exercises, workouts: @workouts, formauth: @formauth}
   end
 
   def create
@@ -16,5 +17,17 @@ class Api::V1::WorkoutsController < ApplicationController
       flash[:notice] = @workout.errors.full_messages.to_sentence
       render :new
     end
+  end
+
+  private
+
+  def workout_params
+    params.require(:workout).permit(
+      :exercise_id,
+      :date,
+      :reps,
+      :sets,
+      :weight
+    )
   end
 end
