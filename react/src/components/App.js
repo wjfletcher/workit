@@ -1,9 +1,10 @@
 import React, { Component }  from 'react';
-import Workout from './Workout';
+import ExerciseList from './ExerciseList';
 
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
 
@@ -11,7 +12,7 @@ class App extends Component {
 
     return(
       <div>
-        dope
+        < ExerciseList />
       </div>
     )
   }

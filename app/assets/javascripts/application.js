@@ -18,11 +18,13 @@
 $(function(){ $(document).foundation(); });
 
 window.onload = function() {
-	var el = document.getElementById("header");
-	var speed = 2;
+	if (document.getElementById("header")) {
+		var el = document.getElementById("header");
+		var speed = 2;
 
-	document.addEventListener("scroll", function() {
-		var yPos = -(window.pageYOffset / speed);
-		el.style.backgroundPosition = "50% " + yPos + "px";
-	});
+		document.addEventListener("scroll", function() {
+			var yPos = -(window.pageYOffset / speed);
+			el.style.backgroundPosition = "50% " + yPos + "px";
+		});
+	}
 };

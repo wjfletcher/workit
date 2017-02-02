@@ -6,7 +6,7 @@ class WorkoutsController < ApplicationController
 
       respond_to do |format|
         format.html
-        format.json { render json: @exercises }
+        format.json {  }
       end
   end
 
