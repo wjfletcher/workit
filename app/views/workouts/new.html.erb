@@ -1,27 +1,32 @@
+<div class="row center-text">
 <h1> New workout </h1>
 
+<div id="app">
+</div>
+
 <%= form_for (@workout) do |f| %>
-  <div class="form-element">
+  <div class="form-element center">
+  <div class="field">
     <%= f.label :date %>
     <%= f.date_field :date, value: Time.now.strftime('%Y-%m-%d') %>
   </div>
   <br />
-  <div class="form-element">
+  <div class="field">
     <%= f.label :exercise_id %>
     <%= f.collection_select :exercise_id, Exercise.order(:name),:id,:name %>
   </div>
   <br />
-  <div class="form-element">
+  <div class="field">
     <%= f.label :reps %>
     <%= f.text_field :reps %>
   </div>
   <br />
-  <div class="form-element">
+  <div class="field">
     <%= f.label :sets %>
     <%= f.number_field :sets %>
   </div>
   <br />
-  <div class="form-element">
+  <div class="field">
     <%= f.label :weight %>
     <%= f.text_field :weight %>
   </div>
@@ -30,3 +35,5 @@
   <%= f.submit "Save", class: "button" %>
   </div>
 <% end %>
+</div>
+</div>
