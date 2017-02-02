@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import WorkoutForm from './WorkoutForm';
 
 class ExerciseList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       exercises: null,
-      showExercises: false
+      showWorkoutForm: false
     };
     this.buttonClick = this.buttonClick.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
@@ -17,8 +18,8 @@ class ExerciseList extends Component {
   }
 
   buttonClick() {
-    let show = !this.state.showExercises;
-    this.setState({ showExercises: show });
+    let show = !this.state.showWorkoutForm;
+    this.setState({ showWorkoutForm: show });
   }
 
   getExercises () {
@@ -42,26 +43,23 @@ class ExerciseList extends Component {
 
   render() {
     let exercises = '';
-    exercises = this.state.exercises;
-    if (this.state.showExercises) {
+    if (this.state.showWorkoutForm) {
+      debugger;
+      exercises = this.state.exercises;
       exercises = exercises.map((exercise) => {
         return (
           <div>
           {exercise.name}
-          {exercise.description}
-          {exercise.category}
-          <button onClick={this.buttonClick}>Hide exercises</button>
           </div>
         )
       });
-    } else {
-      return (
-      <button onClick={this.buttonClick}>Show exercises</button>
-    )
     }
+
     return (
       <div>
-      {exercises}
+        {exercises}
+        < WorkoutForm />
+        <button onClick={this.buttonClick}>Show exercises</button>
       </div>
     );
   }
