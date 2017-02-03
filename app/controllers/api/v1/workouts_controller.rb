@@ -1,18 +1,10 @@
-class WorkoutsController < ApplicationController
+class Api::V1::WorkoutsController < ApplicationController
 
   def index
     @workouts = Workout.where(user_id: current_user.id).order(date: :desc)
+    @formauth = form_authenticity_token
     @exercises = Exercise.all
-
-      respond_to do |format|
-        format.html
-        format.json {  }
-      end
-  end
-
-  def new
-    @workout = Workout.new
-    @exercises = Exercise.all
+    render json: {exercises: @exercises, workouts: @workouts, formauth: @formauth}
   end
 
   def create
@@ -26,7 +18,6 @@ class WorkoutsController < ApplicationController
       render :new
     end
   end
-
 
   private
 
