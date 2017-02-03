@@ -52,11 +52,10 @@ class App extends Component {
         <option value={exercise.id}>{exercise.name}</option>
         )
       });
-
       return (
+
         <div>
         <WorkoutForm
-          key = {exercises.id}
           dropDown = {exercises}
           formAuth = {this.state.formAuth}
         />

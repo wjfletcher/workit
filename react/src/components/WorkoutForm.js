@@ -9,7 +9,8 @@ class WorkoutForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="row center-text">
+      <div className="form-element center">
         <form method="post" action="/workouts" >
         <input name="authenticity_token" value={this.props.formAuth} type="hidden" />
         <select name="workout[exercise_id]" id="workout_exercise_id">
@@ -34,6 +35,7 @@ class WorkoutForm extends Component {
         <br />
         <input type="submit" name="commit" value="Save" />
         </form>
+        </div>
       </div>
     );
   }

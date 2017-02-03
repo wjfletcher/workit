@@ -4,4 +4,6 @@
 <% @exercises.each do |exercise| %>
   <%= exercise.name %><br>
 <% end %>
+
+<%= link_to "Add new exercise", new_exercise_path %>
 </div>

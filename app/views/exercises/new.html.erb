@@ -1,0 +1,26 @@
+<div class="row center-text">
+<h1> New exercise </h1>
+
+<%= form_for (@exercise) do |f| %>
+  <div class="form-element center">
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+  </div>
+  <br />
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description, required: true %>
+  </div>
+  <br />
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.text_field :category, required: true %>
+  </div>
+  <br />
+  <div>
+  <%= f.submit "Save", class: "button" %>
+  </div>
+<% end %>
+</div>
+</div>
