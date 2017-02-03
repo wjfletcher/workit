@@ -68,6 +68,11 @@ html {
   box-shadow: 2px 2px 5px black;
 }
 
+.callout .small {
+  border-radius: none;
+  box-shadow: none;
+}
+
 .workouts {
   margin: 0 auto;
   padding: 10px;
