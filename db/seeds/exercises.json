@@ -1,0 +1,16 @@
+[
+{
+    "email":"jon@a.com",
+    "id":1,
+    "league_id":1,
+    "name":"Slim Jims are good for the heart...OH YEAH!",
+    "owner":"Jon"
+},
+{
+    "email":"robert@a.com",
+    "id":2,
+    "league_id":1,
+    "name":"The Bucket List",
+    "owner":"Robert"
+}
+]
