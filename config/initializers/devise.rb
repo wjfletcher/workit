@@ -255,6 +255,8 @@ Devise.setup do |config|
     }
   end
 
+  config.omniauth :fitbit, ENV['FITBIT_CLIENT_ID'], ENV["FITBIT_CLIENT_SECRET"], scope: "profile activity sleep heartrate location nutrition settings social weight"
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

@@ -8,7 +8,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'foundation-rails'
 gem 'devise'
-gem 'omniauth-google-oauth2' 
+gem 'omniauth-google-oauth2'
+gem 'omniauth-fitbit'
+gem 'fitgem_oauth2'
+
 
 group :development do
   gem 'listen', '~> 3.0.5'
