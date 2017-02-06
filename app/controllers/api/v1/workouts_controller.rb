@@ -20,7 +20,7 @@ class Api::V1::WorkoutsController < ApplicationController
       redirect_to workouts_path
     else
       flash[:notice] = @workout.errors.full_messages.to_sentence
-      render :new
+      render :index
     end
   end
 
