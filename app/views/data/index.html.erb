@@ -1,40 +1,29 @@
-<img src="https://i.stack.imgur.com/jIby9.png">
-
-<% if !@workouts.nil? %>
+<div class="row data">
+<% if !@allworkouts.nil? %>
 <h4>select exercise to view progress</h4>
-<ul class="dropdown menu align-middle-dropdown" data-dropdown-menu>
-  <% @workouts.each do |workout| %>
-    <li><%= workout.exercise.name %></li>
-  <% end %>
-</ul>
+<div class="col small-12 medium-6 large-4">
+<%= form_for (data_path), method: :get do |f| %>
+  <div class="field">
+    <%= f.label :exercise_id %>
+    <%= f.collection_select :exercise_id, @exercises,:id,:name %>
+  </div>
+</div>
+  <div class="col small-12 large-4">
+  <%= f.submit "Update", class: "button" %>
+  </div>
+<% end %>
 <% else %>
   <h3>You have no workouts! get on that!</h3>
 <% end %>
 
+<% if @exercise.nil? %>
+  <% title = "Pick an exercise above" %>
+<% else %>
+  <% title = @exercise.first.name %>
+<% end %>
 
 
-
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
-    google.charts.load('current', {packages: ['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-      // Define the chart to be drawn.
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Element');
-      data.addColumn('number', 'Percentage');
-      data.addRows([
-        ['1', 0.78],
-        ['2', 0.21],
-        ['3', 0.01]
-      ]);
-
-      // Instantiate and draw the chart.
-      var chart = new google.visualization.LineChart(document.getElementById('myPieChart'));
-      chart.draw(data, null);
-    }
-  </script>
-  <!-- Identify where the chart should be drawn. -->
-  <div id="myPieChart"/>
+<div class="chart">
+<%= line_chart @data, title: title, xtitle: "Date", ytitle: "Weight"%>
+</div>
+</div>
