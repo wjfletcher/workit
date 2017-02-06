@@ -11,21 +11,30 @@ class WorkoutForm extends Component {
   handleClick(e) {
     e.preventDefault();
     console.log(this.refs.reps.value);
-    let authenticity_token = this.props.formAuth
-    let date = this.refs.date.value;
-    let exercise = this.refs.exercise.value;
-    let reps = this.refs.reps.value;
-    let sets = this.refs.sets.value;
-    let weight = this.refs.weight.value;
-
+    let fetchBody = {
+      authenticity_token: this.props.formAuth,
+      date: this.refs.date.value,
+      exercise: this.refs.exercise.value,
+      reps: this.refs.reps.value,
+      sets: this.refs.sets.value,
+      weight: this.refs.weight.value,
+    }
+    debugger;
     fetch(`/api/v1/workouts`, {
       credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
       method: 'POST',
-      data: JSON.stringify({workout: {authenticity_token: authenticity_token, date: date, exercise: exercise, reps: reps, sets: sets, weight: weight}}),
-      success: (response) => {
-        console.log('it worked!', response);
-      }
-    });
+      body: JSON.stringify(fetchBody) })
+      .then(response => {
+        if (response.ok) {
+          console.log('it worked!', response);
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+          error = new Error(errorMessage);
+          throw(error);
+        }
+      });
+
   }
 
   render() {
