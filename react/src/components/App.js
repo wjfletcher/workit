@@ -5,6 +5,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      workouts: null,
       exercises: null,
       showWorkoutForm: false,
       formAuth: null
@@ -38,7 +39,8 @@ class App extends Component {
       .then(body => {
         this.setState({
           exercises: body.exercises,
-          formAuth: body.formauth
+          formAuth: body.formauth,
+          workouts: body.workouts
         });
       });
   }
@@ -56,18 +58,19 @@ class App extends Component {
 
         <div>
         <WorkoutForm
+          workouts = {this.state.workouts}
           dropDown = {exercises}
           formAuth = {this.state.formAuth}
         />
 
-        <button onClick={this.buttonClick}>Hide exercises</button>
+        <button className="button" onClick={this.buttonClick}>Cancel</button>
         </div>
       )
     } else {
 
       return (
         <div>
-          <button onClick={this.buttonClick}>Show exercises</button>
+          <button className="button" onClick={this.buttonClick}>Add new exercise</button>
         </div>
       );
     }
