@@ -11,6 +11,7 @@ gem 'devise'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-fitbit'
 gem 'fitgem_oauth2'
+gem 'chartkick'
 
 
 group :development do
