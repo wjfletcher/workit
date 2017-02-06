@@ -13,7 +13,6 @@ class Api::V1::WorkoutsController < ApplicationController
   end
 
   def create
-    binding.pry
     @workout = Workout.new(workout_params)
     @workout.user_id = current_user.id
     if @workout.save
