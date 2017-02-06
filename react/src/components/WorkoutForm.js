@@ -77,7 +77,7 @@ class WorkoutForm extends Component {
         </div>
         </div>
 
-        <input type="submit" name="commit" value="Save" onClick={this.handleClick} />
+        <input className="button" type="submit" name="commit" value="Save" onClick={this.handleClick} />
         </form>
         </div>
       </div>
