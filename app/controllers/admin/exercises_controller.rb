@@ -12,11 +12,9 @@ class Admin::ExercisesController < ApplicationController
   def update
     @exercise = Exercise.where(id: params[:id])
     if params[:commit].nil?
-      binding.pry
       @exercise.update(approved: true)
       redirect_to admin_exercises_path
     else
-      binding.pry
       if @exercise.update(exercise_params)
         redirect_to admin_exercises_path
         flash[:notice] = "Exercise updated"
