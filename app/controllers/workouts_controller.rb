@@ -2,7 +2,7 @@ class WorkoutsController < ApplicationController
 
   def index
     @workouts = Workout.where(user_id: current_user.id).order(date: :desc)
-    @exercises = Exercise.all
+    @exercises = Exercise.where(approved: true)
 
       respond_to do |format|
         format.html
@@ -12,7 +12,7 @@ class WorkoutsController < ApplicationController
 
   def new
     @workout = Workout.new
-    @exercises = Exercise.all
+    @exercises = Exercise.where(approved: true)
   end
 
   def create

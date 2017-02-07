@@ -16,7 +16,7 @@
     <div class="small-12 large-6 columns">
       <div class="field">
         <%= f.label :exercise_id %>
-        <%= f.collection_select :exercise_id, Exercise.order(:name),:id,:name %>
+        <%= f.collection_select :exercise_id, Exercise.where(approved: true).order(:name),:id,:name %>
       </div>
     </div>
     </div>
