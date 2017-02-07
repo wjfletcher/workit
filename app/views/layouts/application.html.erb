@@ -7,6 +7,16 @@
     <title><%= content_for?(:title) ? yield(:title) : "WorkIt" %></title>
 
 
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/<%= bootstrap_version %>/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+
+
+
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/mode/javascript/javascript.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.min.css" media="screen" title="no title" charset="utf-8">
@@ -20,20 +30,55 @@
   <body>
 
 
-  <div class="top-bar-container" data-sticky-container>
-    <div class="sticky" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
-      <div class="top-bar">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">WorkIt</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <li><%= link_to current_user.username, workouts_path %></li>
+              <li><%= link_to 'Data', data_path %></li>
+              <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
+              <li><%= link_to "Login", new_user_session_path %></li>
+            <% end %>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+
+
+
+
+
+      <!-- <div class="top-bar">
         <div class="row column">
           <div class="top-bar-title">
+            <h3><%= link_to 'WorkIt', root_path %></h3>
             <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
               <button class="menu-icon dark" type="button" data-toggle></button>
             </span>
-            <h3><%= link_to 'WorkIt', root_path %></h3>
           </div>
 
           <div id="responsive-menu">
             <div class="top-bar-right">
-              <ul class="menu horizontal">
+              <ul class="menu">
                 <% if user_signed_in? %>
                   <li><%= link_to current_user.username, workouts_path %></li>
                   <li><%= link_to 'Data', data_path %></li>
@@ -47,22 +92,25 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </div> -->
+
 
     <% if notice %>
-        <div class="callout small secondary">
+        <div class="alert alert-success" role="alert">
           <%= notice %>
         </div>
       <% end %>
       <% if alert %>
-        <div class="callout small alert">
+        <div class="alert alert-warning" role="alert">
           <%= alert %>
         </div>
       <% end %>
 
     <%= yield %>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/<%= bootstrap_version %>/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   </body>
 </html>
