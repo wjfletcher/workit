@@ -4,7 +4,7 @@ class Api::V1::WorkoutsController < ApplicationController
   def index
     @workouts = Workout.where(user_id: current_user.id).order(date: :desc)
     @formauth = form_authenticity_token
-    @exercises = Exercise.all
+    @exercises = Exercise.where(approved: true)
     render json: {exercises: @exercises, workouts: @workouts, formauth: @formauth}
   end
 

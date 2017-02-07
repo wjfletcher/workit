@@ -2,7 +2,7 @@ class WorkoutsController < ApplicationController
 
   def index
     @workouts = Workout.where(user_id: current_user.id).order(date: :desc)
-    @exercises = Exercise.all
+    @exercises = Exercise.where(approved: true)
 
       respond_to do |format|
         format.html
@@ -12,7 +12,7 @@ class WorkoutsController < ApplicationController
 
   def new
     @workout = Workout.new
-    @exercises = Exercise.all
+    @exercises = Exercise.where(approved: true)
   end
 
   def create
@@ -24,6 +24,21 @@ class WorkoutsController < ApplicationController
     else
       flash[:notice] = @workout.errors.full_messages.to_sentence
       render :new
+    end
+  end
+
+  def edit
+    @workout = Workout.where(id: params[:id]).first
+  end
+
+  def update
+      @workout = Workout.where(id: params[:id])
+    if @workout.update(workout_params)
+      redirect_to workouts_path
+      flash[:notice] = "Workout updated"
+    else
+      flash[:alert] = @exercise.errors.full_messages.to_sentence
+      render :edit
     end
   end
 

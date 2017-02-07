@@ -10,7 +10,7 @@ class ExercisesController < ApplicationController
   def create
     @exercise = Exercise.new(exercise_params)
     if @exercise.save
-      flash[:notice] = ("exercise added successfully.")
+      flash[:notice] = ("exercise awaiting admin approval.")
       redirect_to exercises_path
     else
       flash[:notice] = @exercise.errors.full_messages.to_sentence

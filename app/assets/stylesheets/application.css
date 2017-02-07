@@ -41,25 +41,31 @@ nav {
   border-radius: 0px;
   min-height: 50px;
   box-shadow: 0px 2px 3px grey;
+  z-index: 1;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
     background-color: black;
 }
 
-.navbar a:visited, a:link {
-  color: white;
-}
-
 .navbar-collapse {
   border-top: none;
 }
-.navbar-nav li a:link, a:visited {
+
+.navbar-nav li a:link {
+  color: white !important;
+}
+
+.navbar-nav li a:visited {
   color: white !important;
 }
 
 .navbar-nav li a:hover {
   color: grey !important;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
 }
 
 .alert {
@@ -84,7 +90,7 @@ nav {
   height: 100%;
   margin-top: -70px;
   background-position: center top;
-  z-index: -1;
+
 }
 
 .headerspacer {
@@ -94,8 +100,11 @@ nav {
 .background .callout {
   max-width: 500px;
   margin: 0 auto;
+  color: white;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px;
+  border: none;
 }
 
 .callout {
