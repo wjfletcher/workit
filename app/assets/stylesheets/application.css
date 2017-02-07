@@ -82,7 +82,9 @@ nav {
     url(http://www.kaylainthecity.com/wp-content/uploads/gym.jpg) 0 0 no-repeat fixed;
   background-size: cover;
   height: 100%;
+  margin-top: -70px;
   background-position: center top;
+  z-index: -1;
 }
 
 .headerspacer {
