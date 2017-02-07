@@ -21,7 +21,7 @@ $(function(){ $(document).foundation(); });
 window.onload = function() {
 	if (document.getElementById("header")) {
 		var el = document.getElementById("header");
-		var speed = 2;
+		var speed = 4;
 
 		document.addEventListener("scroll", function() {
 			var yPos = -(window.pageYOffset / speed);

@@ -20,6 +20,6 @@ Rails.application.routes.draw do
 
   resources :data, only: [:index]
 
-  get 'fitbit/:resource.json' => 'fitbit_api#data_request'
+  get 'fitbit/:resource/:date.json' => 'fitbit_api#data_request'
 
 end

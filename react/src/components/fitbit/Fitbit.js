@@ -4,7 +4,7 @@ class Fitbit extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    dataset: null
+    steps: null
     };
     this.componentDidMount = this.componentDidMount.bind(this);
     this.getFitbit = this.getFitbit.bind(this);
@@ -15,7 +15,7 @@ class Fitbit extends Component {
   }
 
   getFitbit () {
-    fetch(`/fitbit/activities.json`, {
+    fetch(`/fitbit/steps/today.json`, {
       credentials: 'same-origin'
     })
       .then(response => {
@@ -28,15 +28,17 @@ class Fitbit extends Component {
       .then(response => response.json())
       .then(body => {
         this.setState({
-          dataset: body
+          steps: body["activities-steps"][0].value
         });
       });
   }
 
   render() {
-    debugger;
     return(
-      <div>{this.state.dataset}</div>
+      <div><h1> Your Steps Today </h1>
+      <h3>{this.state.steps}</h3>
+      <button className="button" type="button" onClick={this.getFitbit}>Update</button>
+      </div>
     )
   }
 }
