@@ -14,6 +14,10 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :admin do
+    resources :exercises
+  end
+
   resources :data, only: [:index]
 
   get 'fitbit/:resource/:date.json' => 'fitbit_api#data_request'
