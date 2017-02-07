@@ -17,26 +17,54 @@
  */
 html {
   height: 100%;
+  font-family: 'Lato';
 }
  body {
   height: 100%;
   background-color: #F8F8F8;
  }
 
-
-.sticky {
-  width: 100%;
-  background-color: transparent;
+nav {
+  margin-bottom: 0px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.top-bar {
-  padding: 0px;
+.navbar-brand {
+  font-size: 50px;
+}
+
+.navbar-default {
   background-color: #F95738;
   color: white;
+  border: none;
+  border-radius: 0px;
+  min-height: 50px;
+  box-shadow: 0px 2px 3px grey;
 }
 
-.top-bar a:visited {
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+.navbar a:visited, a:link {
   color: white;
+}
+
+.navbar-collapse {
+  border-top: none;
+}
+.navbar-nav li a:link, a:visited {
+  color: white !important;
+}
+
+.navbar-nav li a:hover {
+  color: grey !important;
+}
+
+.alert {
+  margin-bottom: 0px;
+  text-align: center;
 }
 
 .top-bar-right {
@@ -47,7 +75,11 @@ html {
   background-color: transparent;
 }
 #header {
-  background: url(http://www.kaylainthecity.com/wp-content/uploads/gym.jpg) 0 0 no-repeat fixed;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(http://www.kaylainthecity.com/wp-content/uploads/gym.jpg) 0 0 no-repeat fixed;
   background-size: cover;
   height: 100%;
   background-position: center top;
@@ -65,8 +97,7 @@ html {
 }
 
 .callout {
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 5px grey;
 }
 
 .callout .small {
@@ -116,4 +147,12 @@ html {
 
 .data {
   padding: 20px;
+}
+
+.button {
+  box-shadow: 2px 2px 5px grey;
+}
+
+.workouts {
+  margin-top: 20px;
 }
