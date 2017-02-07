@@ -27,6 +27,21 @@ class WorkoutsController < ApplicationController
     end
   end
 
+  def edit
+    @workout = Workout.where(id: params[:id]).first
+  end
+
+  def update
+      @workout = Workout.where(id: params[:id])
+    if @workout.update(workout_params)
+      redirect_to workouts_path
+      flash[:notice] = "Workout updated"
+    else
+      flash[:alert] = @exercise.errors.full_messages.to_sentence
+      render :edit
+    end
+  end
+
   def destroy
     @workout = Workout.find(params[:id])
     @workout.destroy
