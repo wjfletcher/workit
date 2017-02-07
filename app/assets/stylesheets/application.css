@@ -17,6 +17,7 @@
  */
 html {
   height: 100%;
+  font-family: 'Lato';
 }
  body {
   height: 100%;
@@ -25,22 +26,40 @@ html {
 
 nav {
   margin-bottom: 0px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.navbar {
+.navbar-brand {
+  font-size: 50px;
+}
+
+.navbar-default {
   background-color: #F95738;
   color: white;
   border: none;
   border-radius: 0px;
-  height: 50px !important;
+  min-height: 50px;
+  box-shadow: 0px 2px 3px grey;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
 }
 
 .navbar a:visited, a:link {
   color: white;
 }
 
-.navbar-nav li a {
+.navbar-collapse {
+  border-top: none;
+}
+.navbar-nav li a:link, a:visited {
   color: white !important;
+}
+
+.navbar-nav li a:hover {
+  color: grey !important;
 }
 
 .alert {
@@ -78,8 +97,7 @@ nav {
 }
 
 .callout {
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 5px grey;
 }
 
 .callout .small {
@@ -129,4 +147,12 @@ nav {
 
 .data {
   padding: 20px;
+}
+
+.button {
+  box-shadow: 2px 2px 5px grey;
+}
+
+.workouts {
+  margin-top: 20px;
 }
