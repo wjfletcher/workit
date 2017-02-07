@@ -1,6 +1,6 @@
 class ExercisesController < ApplicationController
   def index
-    @exercises = Exercise.all
+    @exercises = Exercise.where(approved: true)
   end
 
   def new

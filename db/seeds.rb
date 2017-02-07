@@ -13,6 +13,13 @@ JSON.parse(open("#{Rails.root}/db/seeds/exercises.json").read).each do |exercise
    Exercise.create(exercise)
 end
 
+User.create!(
+  email: "admin@admin.com",
+  password: "password",
+  username: "The Admin",
+  admin: true
+)
+
 
 
 # Exercise.create!([
