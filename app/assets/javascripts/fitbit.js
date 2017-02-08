@@ -25,5 +25,6 @@ function init(){
 }
 }
 function get_request_url(){
+  debugger;
   return $("select[name='request-url'] option:selected").val()
 }
