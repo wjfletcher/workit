@@ -2,161 +2,193 @@
   {
     "name":"Dumbbell shoulder press",
     "description":"Position dumbbells to each side of shoulders with elbows below wrists. Press dumbbells upward until arms are extended overhead. Lower to sides of shoulders and repeat.",
-    "category":"Shoulders"
+    "category":"Shoulders",
+    "approved":"true"
   },
   {
     "name":"Upright barbell row",
     "description":"Grasp bar with shoulder width or slightly narrower overhand grip. Pull bar to neck with elbows leading. Allow wrists to flex as bar rises. Lower and repeat.",
-    "category":"Shoulders"
+    "category":"Shoulders",
+    "approved":"true"
   },
   {
     "name":"Seated bent-over rear delt raise",
     "description":"Grab a set of dumbbells and sit on the end of a flat bench with your knees together. Place the dumbbells in front of your feet. Lean over as far as you can go. Grasp the dumbbells with your palms facing inward and pick them up off the floor. While keeping your arms slightly bent and rotating at the shoulders only, slowly raise the dumbbells up, following a semi-circle path. Return to starting position",
-    "category":"Shoulders"
+    "category":"Shoulders",
+    "approved":"true"
   },
   {
     "name":"Side lateral raise",
     "description":"Grasp dumbbells in front of thighs with elbows slightly bent. Bend over slightly with hips and knees bent slightly. Raise upper arms to sides until elbows are shoulder height. Maintain elbows' height above or equal to wrists. Lower and repeat.",
-    "category":"Shoulders"
+    "category":"Shoulders",
+    "approved":"true"
   },
   {
     "name":"Standing front barbell raise overhead",
     "description":"To begin this exercise start off with a weighted barbell rested in front of your thighs with your palms facing down. Then lift the barbell up until it is overhead above your body and hold onto this position for a few seconds. Return back to the starting position.",
-    "category":"Shoulders"
+    "category":"Shoulders",
+    "approved":"true"
   },
   {
     "name":"Close-grip bench press",
     "description":"Lay back on the bench and position your feet firmly on the floor. Grasp the barbell with an overhand grip (palms facing your feet) with your hands about 8-12 inches apart. Take the weight off the rack. Keeping your elbows tucked in at your sides, slowly lower the barbell down to your middle chest until it's about 1 inch from touching. Contract the triceps and push the barbell back up until your arms are almost fully outstretched. Don't lock the elbows, and then repeat the movement for desired reps.",
-    "category":"Triceps"
+    "category":"Triceps",
+    "approved":"true"
   },
   {
     "name":"Dip",
     "description":"Hoist yourself up onto a bench, chair or step as long as it is stable and secure to take your body weight. Hands should be shoulder width apart fingers facing forward and elbows pointing backwards with a slight bend in the elbows. Legs extended out in front of you with a slight bend in the knee. Slowly lower your body until your shoulder joints are below your elbows. Push back up until your elbows are nearly straight but do not lock them out.",
-    "category":"Triceps"
+    "category":"Triceps",
+    "approved":"true"
   },
   {
     "name":"Dumbbell overhead triceps press",
     "description":"Sit on a bench with back support holding a dumbbell in each hand. Extend your arms fully and raise the dumbbells overhead. Lower the dumbbells behind your head, bending at the elbows. Keep your elbows steady. Stop just shy of the dumbbell touching your neck. Pause for one second, then extend your arms back to the starting position overhead.",
-    "category":"Triceps"
+    "category":"Triceps",
+    "approved":"true"
   },
   {
     "name":"Lying triceps extension (skullcrusher)",
     "description":"Lie on bench with narrow overhand grip on barbell. Position barbell over forehead with arms extended. Lower bar by bending elbows. As bar nears head, move elbows slightly back just enough to allow bar to clear around curvature of head. Extend arms. As bar clears head, reposition elbows to their former position until arms are fully extended. Repeat.",
-    "category":"Triceps"
+    "category":"Triceps",
+    "approved":"true"
   },
   {
     "name":"Triceps pushdown",
     "description":"Face high pulley and grasp cable attachment with narrow overhand grip. Position elbows to side. Extend arms down. Return until forearm is at 90 degrees to upper arm. Repeat.",
-    "category":"Triceps"
+    "category":"Triceps",
+    "approved":"true"
   },
   {
     "name":"Incline hammer curl",
     "description":"In order to perform the incline hammer curl set up a bench at a 45 degree angle with the bottom pad angled slightly, as if you were going to perform an incline dumbbell press. Lay down on the bench with your arms fully extended gripping a pair of dumbbells, the dumbbell should be slightly off the ground upon full extension. While laying back keep your elbows locked in place, curl only your upper arm until fully contracted. Squeeze at the top for 1 second. Slowly lower the dumbbell back down until its returned to your side in the fully extended position. Proceed with your other arm.",
-    "category":"Biceps"
+    "category":"Biceps",
+    "approved":"true"
   },
   {
     "name":"Incline inner-biceps curl",
     "description":"Adjust and incline bench to a 45 degree angle. Grasp dumbbells in each hand with and sit down with your back against the bench, with your feet resting on the floor for support and your arms hanging down at your sides with your palms facing your body. While keeping your elbow straight, raise the dumbbells up towards your deltoids, contracting your biceps. At the top of the movement, your palms should be facing each other at your shoulders. It should look like your are doing a two arm flex. Return the weight to the starting position in a controlled manner and repeat.",
-    "category":"Biceps"
+    "category":"Biceps",
+    "approved":"true"
   },
   {
     "name":"EZ bar curl",
     "description":"Grab an EZ-Bar with an underhand grip. Keep a tight posture and stand upright with your feet about shoulder-width apart. Curl the bar until your biceps fully contract, pause, and then slowly lower the bar to the starting position.",
-    "category":"Biceps"
+    "category":"Biceps",
+    "approved":"true"
   },
   {
     "name":"Standing curl",
     "description":"Assume the starting position for the standing dumbbell curl by grasping a pair of dumbbells and standing straight up, feet together and dumbbells by your side. The dumbbells should not be touching your body. Your palms should facing upwards. Tension should be on the biceps. Slowly curl the dumbbells up as far as possible. Squeeze the biceps hard, and then slowly lower the dumbbells back down to the starting position.",
-    "category":"Biceps"
+    "category":"Biceps",
+    "approved":"true"
   },
   {
     "name":"Standing hammer curl",
     "description":"The hammer curl is a great exercise for the biceps and forearms. Set up by grasping a set of dumbbells and standing straight up with the dumbbells by your sides. You should be using a neutral grip, meaning your palms are facing your body. Bend your arms slightly to take tension into the biceps. Keeping your body fixed and elbows in at your sides, slowly curl the dumbbells up as far as possible. Squeeze the biceps at the top of the movement, and then slowly lower the weight back to the starting position.",
-    "category":"Biceps"
+    "category":"Biceps",
+    "approved":"true"
   },
   {
     "name":"Barbell bench press",
     "description":"Lie supine on bench. Dismount barbell from rack over upper chest using wide oblique overhand grip. Lower weight to chest. Press bar upward until arms are extended. Repeat.",
-    "category":"Chest"
+    "category":"Chest",
+    "approved":"true"
   },
   {
     "name":"Dumbbell bench press",
     "description":"Sit down on bench with dumbbells resting on lower thigh. Kick weights to shoulder and lie back. Position dumbbells to sides of chest with bent arm under each dumbbell. Press dumbbells up with elbows to sides until arms are extended. Lower weight to sides of chest until slight stretch is felt in chest or shoulder. Repeat.",
-    "category":"Chest"
+    "category":"Chest",
+    "approved":"true"
   },
   {
     "name":"Incline dumbbell bench press",
     "description":"Sit down on incline bench with dumbbells resting on lower thigh. Kick weights to shoulders and lean back. Position dumbbells to sides of chest with upper arm under each dumbbell. Press dumbbells up with elbows to sides until arms are extended. Lower weight to sides of upper chest until slight stretch is felt in chest or shoulder. Repeat.",
-    "category":"Chest"
+    "category":"Chest",
+    "approved":"true"
   },
   {
     "name":"Dips for chest",
     "description":"Mount wide dip bar with oblique grip (bar diagonal under palm), arms straight with shoulders above hands. Bend knees and hips slightly. Lower body by bending arms, allowing elbows to flare out to sides. When slight stretch is felt in chest or shoulders, push body up until arms are straight. Repeat.",
-    "category":"Chest"
+    "category":"Chest",
+    "approved":"true"
   },
   {
     "name":"Barbell deadlift",
     "description":"Bend at hips and knees, and grab a loaded barbell with an overhand grip about twice as wide as shoulder-width. Without allowing your lower back to round, stand up and thrust your hips forward as you squeeze your glutes. Pause, then lower the bar back to the floor while keeping it as close to your body as possible.",
-    "category":"Back"
+    "category":"Back",
+    "approved":"true"
   },
   {
     "name":"Wide-grip pull-up",
     "description":"The wide grip pull up is the king of all back building exercises, and all your need is a pull up bar! Grasp the pull up bar with a wider than shoulder-width overhand grip. Step off the block, or bend at the knees to take your weight off the floor. This is the starting position. Look up towards the bar, and slowly pull yourself up until you chin is over the bar. Slowly lower yourself back to the starting position.",
-    "category":"Back"
+    "category":"Back",
+    "approved":"true"
   },
   {
     "name":"Single-arm dumbbell Row",
     "description":"Set up for the one arm dumbbell row by grabbing a flat bench and sitting a dumbbell on the left hand side at one end. Position yourself on the left side of the bench with your right knee and right hand resting on the bench. Using a neutral grip, pick up the dumbbell with your left hand. Pull your shoulder blade back while keeping your arm straight. This is the starting position for the exercise. Slowly pull the dumbbell up as far as possible. Pause and squeeze your shoulder blades together, and then slowly lower the dumbbell back to the starting position.",
-    "category":"Back"
+    "category":"Back",
+    "approved":"true"
   },
   {
     "name":"Seated cable row",
     "description":"Sit at a low-pulley cable station with a V-handle attachment. Place the feet securely on the platform and grab the handle with both hands using an overhand grip. Using your legs (not your back), sit back with arms fully extended supporting the weight. Keeping your torso stationary, drive your elbows past your sides and pull the cable attachment towards the waist. Pause and squeeze shoulder blades together at the top of the row before returning to the starting position.",
-    "category":"Back"
+    "category":"Back",
+    "approved":"true"
   },
   {
     "name":"Squat",
     "description":"Stand with your head facing forward and your chest held up and out. Place your feet shoulder-width apart or slightly wider. Extend your hands straight out in front of you to help keep your balance. You can also bend the elbows or clasp the fingers. Sit back and down like you're sitting into an imaginary chair. Keep your head facing forward as your upper body bends forward a bit. Rather than allowing your back to round, let your lower back arch slightly as you descend. Lower down so your thighs are as parallel to the floor as possible, with your knees over your ankles. Press your weight back into your heels. Keep your body tight, and push through your heels to bring yourself back to the starting position.",
-    "category":"Legs"
+    "category":"Legs",
+    "approved":"true"
   },
   {
     "name":"Lunge",
     "description":"Stand with hands on hips or clasped behind neck. Lunge forward with first leg. Land on heel, then forefoot. Lower body by flexing knee and hip of front leg until knee of rear leg is almost in contact with floor. Return to original standing position by forcibly extending hip and knee of forward leg. Repeat by alternating lunge with opposite leg.",
-    "category":"Legs"
+    "category":"Legs",
+    "approved":"true"
   },
   {
     "name":"Leg press",
     "description":"Sit on machine with back on padded support. Place feet on platform. Extend hips and knees. Release dock lever and grasp handles to sides. Lower sled by flexing hips and knees until knees are just short of complete flexion. Return by extending knees and hips. Repeat.",
-    "category":"Legs"
+    "category":"Legs",
+    "approved":"true"
   },
   {
     "name":"Medicine ball Russian twist",
     "description":"Sit on the floor in the top position of a situp and, holding a medicine ball with both hands, extend your arms in front of you. Explosively twist your body to one side and then twist back. Alternate sides.",
-    "category":"Abs"
+    "category":"Abs",
+    "approved":"true"
   },
   {
     "name":"Plank",
     "description":"Get into pushup position and bend your elbows to lower your forearms to the floor. Hold the position with abs braced.",
-    "category":"Abs"
+    "category":"Abs",
+    "approved":"true"
   },
   {
     "name":"Side plank",
     "description":"Lie on your left side resting your left forearm on the floor for support. Raise your hips up so your body forms a straight line and brace your abs—your weight should be on your left forearm and the edge of your left foot. Hold the position with abs braced.",
-    "category":"Abs"
+    "category":"Abs",
+    "approved":"true"
   },
   {
     "name":"Medicine ball v-up",
     "description":"Lie on your back on the floor holding the ball with both hands behind your head. Extend you legs. Brace your abs and sit all the way up. Raise your legs simultaneously and reach for your toes with the ball. Your body should form a V shape at the top.",
-    "category":"Abs"
+    "category":"Abs",
+    "approved":"true"
   },
   {
     "name":"Ab-Wheel rollout",
     "description":"Kneel on the floor and hold an ab wheel beneath your shoulders. Brace your abs and roll the wheel forward until you feel you’re about to lose tension in your core and your hips might sag. Roll yourself back to start. Do as many reps as you can with perfect form and end the set when you think you might break form.",
-    "category":"Abs"
+    "category":"Abs",
+    "approved":"true"
   },
   {
     "name":"Hanging knee raise",
     "description":"Grab a pullup bar with a shoulder-width overhand grip, making sure your arms are completely straight and your feet are off the ground. This is your starting position. Brace your core and use your abs to raise your knees toward your shoulders. Pause when the tops of your thighs reach your chest.",
-    "category":"Abs"
+    "category":"Abs",
+    "approved":"true"
   }
 ]
