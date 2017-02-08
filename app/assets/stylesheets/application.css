@@ -164,6 +164,11 @@ nav {
   box-shadow: 2px 2px 5px grey;
 }
 
+.active {
+  background-color: white !important;
+  color: blue;
+}
+
 .workouts {
   margin-top: 20px;
 }

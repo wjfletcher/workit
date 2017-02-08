@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import Fitbit from './components/fitbit/Fitbit';
+import ExerciseApp from './components/exercise/ExerciseApp';
 
 $(function() {
   if (document.getElementById('app')) {
@@ -14,6 +15,11 @@ $(function() {
     ReactDOM.render(
       <Fitbit/>,
       document.getElementById('fitbit')
+    );
+  } else if (document.getElementById('exerciseapp')) {
+    ReactDOM.render(
+      <ExerciseApp/>,
+      document.getElementById('exerciseapp')
     );
   }
 });
