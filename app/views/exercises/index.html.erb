@@ -1,9 +1,5 @@
 <div class="row center">
 <h1>All Exercises</h1>
 
-<% @exercises.each do |exercise| %>
-  <%= exercise.name %><%= exercise.category %><%= exercise.description %><br>
-<% end %>
-
-<%= link_to "Add new exercise", new_exercise_path %>
+<div id="exerciseapp"></div>
 </div>
