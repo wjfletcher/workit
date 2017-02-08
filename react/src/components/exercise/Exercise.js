@@ -12,7 +12,8 @@ class Exercise extends Component{
     return(
       <div className="callout">
       <li className="exerciselist">
-        {this.props.name} - {this.props.description}
+        <h3>{this.props.name}</h3>
+        <p>{this.props.description}</p>
       </li>
       </div>
     )

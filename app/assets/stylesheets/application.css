@@ -32,6 +32,7 @@ nav {
 
 .navbar-brand {
   font-size: 50px;
+  font-family: 'Black Ops One';
 }
 
 .navbar-default {
@@ -66,6 +67,11 @@ nav {
 
 .navbar-default .navbar-brand {
   color: white;
+}
+
+.background .callout h1 {
+  font-family: 'Black Ops One';
+  font-size: 120px;
 }
 
 .alert {
@@ -165,7 +171,7 @@ nav {
 }
 
 .active {
-  background-color: white !important;
+  background-color: grey !important;
   color: blue;
 }
 

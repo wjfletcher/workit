@@ -6,20 +6,13 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "WorkIt" %></title>
 
-
+    <%= stylesheet_link_tag 'application',
+'https://fonts.googleapis.com/css?family=Black+Ops+One|Lato',
+ media: 'all', 'data-turbolinks-track' => true %>
 
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/<%= bootstrap_version %>/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-
-
-
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/mode/javascript/javascript.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.min.css" media="screen" title="no title" charset="utf-8">
 
 
     <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
@@ -51,7 +44,8 @@
                 <li><%= link_to 'Admin', admin_exercises_path %><li>
               <% end %>
               <li><%= link_to current_user.username, workouts_path %></li>
-              <li><%= link_to 'Data', data_path %></li>
+              <li><%= link_to 'Exercises', exercises_path %></li>
+              <li><%= link_to 'Graphs', data_path %></li>
               <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
             <% else %>

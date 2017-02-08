@@ -23,10 +23,6 @@
   <% end %>
 </div>
 
-
-<%= link_to "Discover new exercise!", exercises_path %>
-<%= link_to 'Add a workout', new_workout_path %>
-
 <br><br>
 <% if current_user.identity_for("fitbit") %>
 <div id="fitbit"></div>

@@ -76,16 +76,16 @@ class ExerciseApp extends React.Component {
     })
 
     return (
-      <div className="row center">
-        <div className = "column small-6">
+      <div className="row center-text">
+        <div className = "column small-12 medium-6 large-6">
           <h1>Muscle Group</h1>
           <ul>
             {categories}
           </ul>
         </div>
-        <div className = "column small-6">
+        <div className = "column small-12 medium-6 large-6">
           <h1>Exercises</h1>
-          <ul>
+          <ul className="no-bullets">
             <ExerciseList
               key = {1}
               data = {data}

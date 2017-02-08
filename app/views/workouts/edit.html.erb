@@ -1,8 +1,5 @@
 <div class="row center-text">
-<h1> New workout </h1>
-
-<div id="app">
-</div>
+<h1> Edit workout </h1>
 
 <%= form_for (@workout) do |f| %>
   <div class="form-element center">
@@ -10,7 +7,7 @@
     <div class="small-12 large-6 columns">
       <div class="field">
         <%= f.label :date %>
-        <%= f.date_field :date, value: Time.now.strftime('%Y-%m-%d') %>
+        <%= f.date_field :date %>
       </div>
     </div>
     <div class="small-12 large-6 columns">
