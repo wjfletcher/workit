@@ -12,6 +12,7 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-fitbit'
 gem 'fitgem_oauth2'
 gem 'chartkick'
+gem 'groupdate'
 
 
 group :development do

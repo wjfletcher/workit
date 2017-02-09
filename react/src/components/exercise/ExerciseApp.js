@@ -76,7 +76,7 @@ class ExerciseApp extends React.Component {
     })
 
     return (
-      <div className="row center-text">
+      <div>
         <div className = "column small-12 medium-6 large-6">
           <h1>Muscle Group</h1>
           <ul>

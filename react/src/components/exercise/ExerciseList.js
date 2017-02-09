@@ -24,7 +24,7 @@ class ExerciseList extends Component{
       })
     }
     return(
-      <ul>{data}</ul>
+      <div>{data}</div>
     )
   }
 };
