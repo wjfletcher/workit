@@ -93,6 +93,8 @@ GEM
       sprockets-es6 (>= 0.9.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    groupdate (3.2.0)
+      activesupport (>= 3)
     hashie (3.5.1)
     i18n (0.7.0)
     jquery-rails (4.2.2)
@@ -272,6 +274,7 @@ DEPENDENCIES
   factory_girl_rails
   fitgem_oauth2
   foundation-rails
+  groupdate
   jquery-rails
   launchy
   listen (~> 3.0.5)
