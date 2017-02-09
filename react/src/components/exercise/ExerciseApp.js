@@ -82,10 +82,11 @@ class ExerciseApp extends React.Component {
           <ul>
             {categories}
           </ul>
+          <a href="/exercises/new">Add an exercise</a>
         </div>
         <div className = "column small-12 medium-6 large-6">
           <h1>Exercises</h1>
-          <ul className="no-bullets">
+          <ul>
             <ExerciseList
               key = {1}
               data = {data}
