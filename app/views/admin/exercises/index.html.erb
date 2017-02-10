@@ -1,8 +1,13 @@
-
+<div class="image-background">
+  <div class="row center">
 <ul>
 <% @exercises.each do |exercise| %>
+  <div class="callout center-text">
   <li><%= exercise.name %></li>
   <%= button_to "Approve", admin_exercise_path(id: exercise.id), method: :patch %>
   <%= button_to "Edit", edit_admin_exercise_path(exercise), method: :get %>
+</div>
 <% end %>
 </ul>
+</div>
+</div>

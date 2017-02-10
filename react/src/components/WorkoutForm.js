@@ -39,8 +39,13 @@ class WorkoutForm extends Component {
   }
 
   render() {
+    let today = new Date();
+    let month = ("0" + (today.getMonth()+1)).slice(-2);
+    let day = ("0" + today.getDate()).slice(-2);
+    let year = today.getFullYear();
+    today = `${year}-${month}-${day}`
     return (
-      <div className="row center-text">
+
       <div className="form-element center">
         <form method="post" action="/workouts" >
 
@@ -49,7 +54,7 @@ class WorkoutForm extends Component {
         <div className="row">
         <div className="field small-12 large-6 columns">
         <label htmlFor="workout_date">Date</label>
-        <input type="date" name="workout[date]" id="workout_date" ref="date" />
+        <input type="date" name="workout[date]" id="workout_date" ref="date" defaultValue={today}/>
         </div>
 
         <div className="field small-12 large-6 columns">
@@ -80,7 +85,7 @@ class WorkoutForm extends Component {
         <input className="button" type="submit" name="commit" value="Save" onClick={this.handleClick} />
         </form>
         </div>
-      </div>
+
     );
   }
 }

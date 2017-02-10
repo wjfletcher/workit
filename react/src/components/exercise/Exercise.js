@@ -11,7 +11,7 @@ class Exercise extends Component{
   render() {
     return(
       <div className="callout">
-      <li className="exerciselist">
+      <li>
         <h3>{this.props.name}</h3>
         <p>{this.props.description}</p>
       </li>

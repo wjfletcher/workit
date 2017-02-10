@@ -70,7 +70,7 @@ class App extends Component {
 
       return (
         <div>
-          <button className="button" onClick={this.buttonClick}>Add new exercise</button>
+          <button className="button" onClick={this.buttonClick}>Add new workout</button>
         </div>
       );
     }

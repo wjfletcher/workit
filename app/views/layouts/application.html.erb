@@ -7,8 +7,13 @@
     <title><%= content_for?(:title) ? yield(:title) : "WorkIt" %></title>
 
     <%= stylesheet_link_tag 'application',
-'https://fonts.googleapis.com/css?family=Black+Ops+One|Lato',
+    'https://fonts.googleapis.com/css?family=Lato',
+    media: 'all', 'data-turbolinks-track' => true %>
+
+    <%= stylesheet_link_tag 'application',
+'https://fonts.googleapis.com/css?family=Black+Ops+One',
  media: 'all', 'data-turbolinks-track' => true %>
+
 
 
     <!-- Latest compiled and minified CSS -->
@@ -21,6 +26,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <style>{font-family: 'Lato', sans-serifs;}</style>
 
 
     <nav class="navbar navbar-default">

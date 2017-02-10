@@ -12,10 +12,12 @@ $(function() {
       document.getElementById('app')
     );
 
-    ReactDOM.render(
-      <Fitbit/>,
-      document.getElementById('fitbit')
-    );
+    if (document.getElementById('fitbit')) {
+      ReactDOM.render(
+        <Fitbit/>,
+        document.getElementById('fitbit')
+      );
+    }
   } else if (document.getElementById('exerciseapp')) {
     ReactDOM.render(
       <ExerciseApp/>,

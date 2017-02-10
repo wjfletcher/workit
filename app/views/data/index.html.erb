@@ -1,14 +1,14 @@
-<div class="row data">
+<div class="image-background">
+<div class="row data text-center">
 <% if !@allworkouts.nil? %>
-<h4>select exercise to view progress</h4>
-<div class="col small-12 medium-6 large-4">
+<h4 class="black-ops">select exercise to view progress</h4>
+<div>
 <%= form_for (data_path), method: :get do |f| %>
-  <div class="field">
-    <%= f.label :exercise_id %>
+  <div class="field workouts">
     <%= f.collection_select :exercise_id, @exercises,:id,:name %>
   </div>
 </div>
-  <div class="col small-12 large-4">
+  <div>
   <%= f.submit "Update", class: "button" %>
   </div>
 <% end %>
@@ -23,7 +23,8 @@
 <% end %>
 
 
-<div class="chart">
+<div class="chart callout">
 <%= line_chart @data, title: title, xtitle: "Date", ytitle: "Weight"%>
+</div>
 </div>
 </div>

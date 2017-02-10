@@ -1,30 +1,29 @@
-<div class="workouts row text-center">
-<h1>Your Workouts</h1>
+<div class="image-background">
+<div class="top-padding row text-center">
+<h1 class="black-ops">Your Workouts</h1>
 
 <div id="app"></div>
 
-<div class="callout workouts">
-<%  date = 1.day.from_now(@workouts.first.date.to_date) rescue nil # increment the day %>
-  <% if @workouts.empty? %>
-    <h5>You haven't added any workouts!</h5>
-  <% else %>
-    <% @workouts.each do |workout| %>
-      <% if date > workout.date.to_date %>
-        <% date = workout.date.to_date %>
-        <div style="background: #F95738;margin-top: 5px; margin-bottom: 5px;" class="rounded"><b><span style="padding: 5px"><%=h date %></span></b></div>
-      <%end%>
-      <div>
-         <%= link_to "#{workout.exercise.name}", workouts_path %>
-         <%= workout.sets %> sets X <%= workout.reps %> reps X <%= workout.weight %> lbs
-         <%= button_to "Delete", workout_path(id: workout.id), method: :delete, form_class: "deletebutton", data: {confirm: 'Are you sure you want to delete this workout?'}  %>
-         <%= link_to "Edit", edit_workout_path(workout) %>
-      </div>
-    <% end %>
+<% @workouts.each do |date, workout| %>
+  <div class="callout workouts">
+  <h4><%= date.strftime("%m/%d/%Y") %></h4>
+  <% workout.each do |exercise| %>
+  <%= link_to "#{exercise.exercise.name}", workouts_path %>
+  <%= exercise.sets %> sets X <%= exercise.reps %> reps X <%= exercise.weight %> lbs
+  <%= button_to "Delete", workout_path(id: exercise.id), method: :delete, form_class: "deletebutton", data: {confirm: 'Are you sure you want to delete this workout?'} %>
+  <%= link_to "Edit", edit_workout_path(exercise) %>
+  <br>
   <% end %>
-</div>
+  </div>
+  <br>
+<% end %>
+
+
+
 
 <br><br>
 <% if current_user.identity_for("fitbit") %>
 <div id="fitbit"></div>
 <% end %>
+</div>
 </div>

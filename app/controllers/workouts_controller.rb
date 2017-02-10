@@ -2,6 +2,7 @@ class WorkoutsController < ApplicationController
 
   def index
     @workouts = Workout.where(user_id: current_user.id).order(date: :desc)
+    @workouts = @workouts.group_by{ |workout| workout.date.to_date}
     @exercises = Exercise.where(approved: true)
 
       respond_to do |format|

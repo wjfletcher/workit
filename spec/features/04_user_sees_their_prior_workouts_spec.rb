@@ -17,7 +17,6 @@ feature "user sees previous workouts" do
     click_button 'Log in'
     click_link user1.username
     expect(page).to have_content("Your Workouts")
-    click_link 'Add a workout'
-    expect(page).to have_content("New workout")
+    
   end
 end
