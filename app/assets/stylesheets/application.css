@@ -40,6 +40,10 @@ nav {
   color: white;
 }
 
+.white-text {
+  color: white;
+}
+
 .navbar-default {
   background-color: #F95738;
   color: white;
@@ -176,6 +180,13 @@ nav {
   box-shadow: 1px 1px 5px black;
   background-color: #F95738;
   width: 300px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.button :active {
+  color:black;
+  background-color: white;
 }
 
 ul {

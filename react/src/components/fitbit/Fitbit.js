@@ -28,15 +28,24 @@ class Fitbit extends Component {
       .then(response => response.json())
       .then(body => {
         this.setState({
-          steps: body["activities-steps"][0].value
+          steps: body["activities-steps"]
         });
       });
   }
 
   render() {
+    let steps;
+    let totalSteps = 0;
+    if (this.state.steps) {
+    steps = this.state.steps.map(step => {
+      totalSteps += parseInt(step.value);
+    });
+    steps = totalSteps / this.state.steps.length;
+    steps = Math.round(steps);
+    }
     return(
-      <div><h1> Your Steps Today </h1>
-      <h3>{this.state.steps}</h3>
+      <div><h1 className="black-ops"> Average Steps Last 7 Days </h1>
+      <h2 className="white-text">{steps}</h2>
       <button className="button" type="button" onClick={this.getFitbit}>Update</button>
       </div>
     )

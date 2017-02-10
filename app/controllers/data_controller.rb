@@ -1,7 +1,6 @@
 class DataController < ApplicationController
+
   def index
-
-
     @allworkouts = Workout.where(user_id: current_user.id)
     @exercises = []
     @allworkouts.each do |workout|
@@ -15,7 +14,7 @@ class DataController < ApplicationController
     @workouts = Workout.where(user_id: current_user.id)
     @exercise = Exercise.where(id: dropdown)
     @workouts = @workouts.select {|workout| workout["exercise_id"] == @exercise.first.id }
-    
+
     @data = []
     @workouts.each do |workout|
       @data << [workout.date, workout.weight]
