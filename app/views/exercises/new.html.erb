@@ -1,20 +1,21 @@
+<div class="image-background">
 <div class="row center-text">
-<h1> New exercise </h1>
+<h1 class="white-text"> New exercise </h1>
 
 <%= form_for (@exercise) do |f| %>
   <div class="form-element center">
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label :name, class: "white-text" %>
     <%= f.text_field :name, required: true %>
   </div>
   <br />
   <div class="field">
-    <%= f.label :description %>
+    <%= f.label :description, class: "white-text" %>
     <%= f.text_area :description, required: true %>
   </div>
   <br />
   <div class="field">
-    <%= f.label :category %>
+    <%= f.label :category, class: "white-text" %>
     <%= f.text_field :category, required: true %>
   </div>
   <br />
@@ -22,5 +23,6 @@
   <%= f.submit "Save", class: "button" %>
   </div>
 <% end %>
+</div>
 </div>
 </div>

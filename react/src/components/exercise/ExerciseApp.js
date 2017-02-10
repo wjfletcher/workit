@@ -78,14 +78,14 @@ class ExerciseApp extends React.Component {
     return (
       <div>
         <div className = "column small-12 large-4">
-          <h1>Muscle Group</h1>
+          <h2 className="white-text">Muscle Group</h2>
           <ul>
             {categories}
           </ul>
-          <a href="/exercises/new">Add an exercise</a>
+          <h5><a href="/exercises/new" className="white-text">Add an exercise</a></h5>
         </div>
         <div className = "column small-12 large-8">
-          <h1>Exercises</h1>
+          <h2 className="white-text">Exercises</h2>
           <ul>
             <ExerciseList
               key = {1}

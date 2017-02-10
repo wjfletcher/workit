@@ -46,7 +46,6 @@ class Fitbit extends Component {
     return(
       <div><h1 className="black-ops"> Average Steps Last 7 Days </h1>
       <h2 className="white-text">{steps}</h2>
-      <button className="button" type="button" onClick={this.getFitbit}>Update</button>
       </div>
     )
   }
