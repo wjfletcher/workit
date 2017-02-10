@@ -1,22 +1,23 @@
+<div class="image-background">
 <div class="row center-text">
-<h2>Log in</h2>
+<h2 class="black-ops">Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-element center">
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, class: "white-text" %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password, class: "white-text" %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.label :remember_me, class:"white-text" %>
     </div>
   <% end -%>
 
@@ -25,5 +26,8 @@
   </div>
 <% end %>
 
+<div class="devise-links">
 <%= render "devise/shared/links" %>
+</div>
+</div>
 </div>
