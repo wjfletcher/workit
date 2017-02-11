@@ -256,3 +256,8 @@ li {
   color: grey !important;
   text-decoration: none;
 }
+
+.exercise-image {
+  max-width: 150px;
+  max-height: 150px;
+}

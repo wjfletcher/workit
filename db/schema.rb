@@ -10,18 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170207150233) do
+ActiveRecord::Schema.define(version: 20170210185252) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "exercises", force: :cascade do |t|
-    t.string   "name",                        null: false
-    t.text     "description",                 null: false
-    t.string   "category",                    null: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.string   "name",                                                                                           null: false
+    t.text     "description",                                                                                    null: false
+    t.string   "category",                                                                                       null: false
+    t.datetime "created_at",                                                                                     null: false
+    t.datetime "updated_at",                                                                                     null: false
     t.boolean  "approved",    default: false
+    t.string   "image",       default: "https://image.freepik.com/free-icon/muscular-arm-outline_318-46478.jpg"
   end
 
   create_table "identities", force: :cascade do |t|

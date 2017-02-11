@@ -18,6 +18,7 @@ class ExerciseList extends Component{
           key = {exercise.id}
           name = {exercise.name}
           description = {exercise.description}
+          image = {exercise.image}
           handleCategorySelect = {this.props.handleCategorySelect}
           />
         )
