@@ -15,17 +15,3 @@
 //= require foundation
 //= require_tree .
 //= require chartkick
-
-$(function(){ $(document).foundation(); });
-
-window.onload = function() {
-	if (document.getElementById("header")) {
-		var el = document.getElementById("header");
-		var speed = 4;
-
-		document.addEventListener("scroll", function() {
-			var yPos = -(window.pageYOffset / speed);
-			el.style.backgroundPosition = "50% " + yPos + "px";
-		});
-	}
-};
