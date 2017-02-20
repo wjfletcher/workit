@@ -47,6 +47,7 @@ class App extends Component {
 
   render() {
     let exercises = '';
+    let form, buttonText;
     if (this.state.showWorkoutForm) {
       exercises = this.state.exercises;
       exercises = exercises.map((exercise) => {
@@ -54,26 +55,28 @@ class App extends Component {
         <option value={exercise.id}>{exercise.name}</option>
         )
       });
-      return (
 
-        <div>
-        <WorkoutForm
-          workouts = {this.state.workouts}
-          dropDown = {exercises}
-          formAuth = {this.state.formAuth}
-        />
+      buttonText = "Cancel";
 
-        <button className="button" onClick={this.buttonClick}>Cancel</button>
-        </div>
-      )
+      form = <WorkoutForm
+        key = {2}
+        workouts = {this.state.workouts}
+        dropDown = {exercises}
+        formAuth = {this.state.formAuth}
+      />;
+
     } else {
+      buttonText = "Add new workout"
 
-      return (
-        <div>
-          <button className="button" onClick={this.buttonClick}>Add new workout</button>
-        </div>
-      );
+      form = null;
+
     }
+    return(
+      <div>
+        {form}
+        <button className="button" onClick={this.buttonClick}>{buttonText}</button>
+      </div>
+    )
   }
 }
 
