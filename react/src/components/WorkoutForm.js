@@ -43,7 +43,10 @@ class WorkoutForm extends Component {
     let month = ("0" + (today.getMonth()+1)).slice(-2);
     let day = ("0" + today.getDate()).slice(-2);
     let year = today.getFullYear();
-    today = `${year}-${month}-${day}`
+    today = `${year}-${month}-${day}`;
+    let workouts = Object.keys(this.props.workouts).map(workout => {
+      return <div>{workout}, {this.props.workouts[workout][0].reps}</div>
+    });
     return (
 
       <div className="form-element center">
@@ -66,26 +69,25 @@ class WorkoutForm extends Component {
         </div>
 
         <div className="row">
-        <div className="field small-12 large-4 columns">
-          <label htmlFor="workout_reps" className="white-text">Reps</label>
-          <input type="number" name="workout[reps]" id="workout_reps" ref="reps" required="required" />
-        </div>
+          <div className="field small-12 large-4 columns">
+            <label htmlFor="workout_reps" className="white-text">Reps</label>
+            <input type="number" name="workout[reps]" id="workout_reps" ref="reps" required="required" />
+          </div>
 
-        <div className="field small-12 large-4 columns">
-          <label htmlFor="workout_sets" className="white-text">Sets</label>
-          <input type="number" name="workout[sets]" id="workout_sets" ref="sets" required="required"/>
-        </div>
+          <div className="field small-12 large-4 columns">
+            <label htmlFor="workout_sets" className="white-text">Sets</label>
+            <input type="number" name="workout[sets]" id="workout_sets" ref="sets" required="required"/>
+          </div>
 
-        <div className="field small-12 large-4 columns">
-          <label htmlFor="workout_weight" className="white-text">Weight</label>
-          <input type="text" name="workout[weight]" id="workout_weight" ref="weight" required="required"/>
-        </div>
+          <div className="field small-12 large-4 columns">
+            <label htmlFor="workout_weight" className="white-text">Weight</label>
+            <input type="text" name="workout[weight]" id="workout_weight" ref="weight" required="required"/>
+          </div>
         </div>
 
         <input className="button" type="submit" name="commit" value="Save" onClick={this.handleClick} />
         </form>
-        </div>
-
+      </div>
     );
   }
 }

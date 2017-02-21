@@ -1,5 +1,6 @@
 import React, { Component }  from 'react';
 import WorkoutForm from './WorkoutForm';
+import Exercise from './Exercise';
 
 class App extends Component {
   constructor(props) {
@@ -47,6 +48,7 @@ class App extends Component {
 
   render() {
     let exercises = '';
+    let form, buttonText;
     if (this.state.showWorkoutForm) {
       exercises = this.state.exercises;
       exercises = exercises.map((exercise) => {
@@ -54,26 +56,59 @@ class App extends Component {
         <option value={exercise.id}>{exercise.name}</option>
         )
       });
+
+      buttonText = "Cancel";
+      form = <WorkoutForm
+        key = {2}
+        workouts = {this.state.workouts}
+        dropDown = {exercises}
+        formAuth = {this.state.formAuth}
+      />;
+
+    } else {
+      buttonText = "Add new workout"
+      form = null;
+    }
+    let workouts
+    if (this.state.workouts != null) {
+    workouts = Object.keys(this.state.workouts).map(workout => {
+      let workoutDate = workout
+      let exercises = this.state.workouts[workout].map(exercise => {
+        let thisExercise;
+        this.state.exercises.map(myExercise => {
+          if (myExercise.id == exercise.exercise_id) {
+            thisExercise = myExercise.name
+          };
+        })
+        return (
+          <Exercise
+            key = {exercise.id}
+            name = {thisExercise}
+            reps = {exercise.reps}
+            sets = {exercise.sets}
+            weight = {exercise.weight}
+          />
+        );
+      });
+
       return (
-
         <div>
-        <WorkoutForm
-          workouts = {this.state.workouts}
-          dropDown = {exercises}
-          formAuth = {this.state.formAuth}
-        />
-
-        <button className="button" onClick={this.buttonClick}>Cancel</button>
+        <div className="callout workouts">
+          <h4>{workoutDate}</h4>
+          {exercises}
+        </div>
+        <br />
         </div>
       )
-    } else {
-
-      return (
-        <div>
-          <button className="button" onClick={this.buttonClick}>Add new workout</button>
-        </div>
-      );
+    });
     }
+    return (
+      <div>
+        {form}
+        <button className="button" onClick={this.buttonClick}>{buttonText}</button>
+        {workouts}
+      </div>
+    )
   }
 }
 

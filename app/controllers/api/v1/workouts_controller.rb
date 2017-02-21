@@ -3,6 +3,7 @@ class Api::V1::WorkoutsController < ApplicationController
 
   def index
     @workouts = Workout.where(user_id: current_user.id).order(date: :desc)
+    @workouts = @workouts.group_by{ |workout| workout.date.to_date}
     @formauth = form_authenticity_token
     @exercises = Exercise.where(approved: true)
     render json: {exercises: @exercises, workouts: @workouts, formauth: @formauth}
