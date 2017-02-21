@@ -10,19 +10,11 @@ class Exercise extends Component{
 
   render() {
     return(
-      <div className="callout">
-        <div className="row">
+      <div>
+        {this.props.name}: {this.props.sets} X {this.props.reps} X {this.props.weight}lbs{' '}
+        <a className="fa fa-pencil-square fa-lg" href="/workouts/12/edit"></a>{' '}
+        <a className="fa fa-trash fa-lg" data-confirm="Are you sure you want to delete this workout?" rel="nofollow" data-method="delete" href="/workouts/10"></a>
 
-          <div className="column small-12 medium-3 large-3">
-            <img className="exercise-image" src={this.props.image}></img>
-          </div>
-          <div className="column small-12 medium-9 large-9">
-            <li>
-              <h3>{this.props.name}</h3>
-              <p>{this.props.description}</p>
-            </li>
-          </div>
-        </div>
       </div>
     )
   }

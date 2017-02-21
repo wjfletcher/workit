@@ -44,7 +44,6 @@ class WorkoutForm extends Component {
     let day = ("0" + today.getDate()).slice(-2);
     let year = today.getFullYear();
     today = `${year}-${month}-${day}`;
-    debugger;
     let workouts = Object.keys(this.props.workouts).map(workout => {
       return <div>{workout}, {this.props.workouts[workout][0].reps}</div>
     });
@@ -88,8 +87,6 @@ class WorkoutForm extends Component {
 
         <input className="button" type="submit" name="commit" value="Save" onClick={this.handleClick} />
         </form>
-
-        {workouts}
       </div>
     );
   }

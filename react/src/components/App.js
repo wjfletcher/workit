@@ -73,8 +73,6 @@ class App extends Component {
     if (this.state.workouts != null) {
     workouts = Object.keys(this.state.workouts).map(workout => {
       let workoutDate = workout
-      debugger;
-
       let exercises = this.state.workouts[workout].map(exercise => {
         let thisExercise;
         this.state.exercises.map(myExercise => {
@@ -82,7 +80,6 @@ class App extends Component {
             thisExercise = myExercise.name
           };
         })
-        debugger;
         return (
           <Exercise
             key = {exercise.id}
@@ -96,8 +93,11 @@ class App extends Component {
 
       return (
         <div>
-          {workoutDate}
+        <div className="callout workouts">
+          <h4>{workoutDate}</h4>
           {exercises}
+        </div>
+        <br />
         </div>
       )
     });
