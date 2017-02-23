@@ -13,13 +13,13 @@ class WorkoutForm extends Component {
     let fetchBody = {
       workout: {
 
-      date: this.refs.date.value,
-      exercise_id: this.refs.exercise.value,
-      reps: this.refs.reps.value,
-      sets: this.refs.sets.value,
-      weight: this.refs.weight.value
-    }
-  };
+        date: this.refs.date.value,
+        exercise_id: this.refs.exercise.value,
+        reps: this.refs.reps.value,
+        sets: this.refs.sets.value,
+        weight: this.refs.weight.value
+      }
+    };
 
     fetch(`/api/v1/workouts`, {
       method: 'POST',
@@ -35,6 +35,9 @@ class WorkoutForm extends Component {
           error = new Error(errorMessage);
           throw(error);
         }
+      })
+      .then(response => {
+        this.props.getExercises();
       });
 
   }
