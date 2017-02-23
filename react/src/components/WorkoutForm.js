@@ -9,10 +9,10 @@ class WorkoutForm extends Component {
   }
 
   handleClick(e) {
-
+    e.preventDefault();
     let fetchBody = {
       workout: {
-      authenticity_token: this.props.formAuth,
+
       date: this.refs.date.value,
       exercise_id: this.refs.exercise.value,
       reps: this.refs.reps.value,
@@ -29,6 +29,7 @@ class WorkoutForm extends Component {
       .then(response => {
         if (response.ok) {
           return response;
+          this.props.getWorkouts;
         } else {
           let errorMessage = `${response.status} (${response.statusText})`,
           error = new Error(errorMessage);
