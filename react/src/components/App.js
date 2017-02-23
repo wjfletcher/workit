@@ -63,6 +63,7 @@ class App extends Component {
         workouts = {this.state.workouts}
         dropDown = {exercises}
         formAuth = {this.state.formAuth}
+        getExercises = {this.getExercises}
       />;
 
     } else {
@@ -83,6 +84,7 @@ class App extends Component {
         return (
           <Exercise
             key = {exercise.id}
+            id = {exercise.id}
             name = {thisExercise}
             reps = {exercise.reps}
             sets = {exercise.sets}

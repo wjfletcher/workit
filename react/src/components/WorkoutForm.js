@@ -9,17 +9,17 @@ class WorkoutForm extends Component {
   }
 
   handleClick(e) {
-
+    e.preventDefault();
     let fetchBody = {
       workout: {
-      authenticity_token: this.props.formAuth,
-      date: this.refs.date.value,
-      exercise_id: this.refs.exercise.value,
-      reps: this.refs.reps.value,
-      sets: this.refs.sets.value,
-      weight: this.refs.weight.value
-    }
-  };
+
+        date: this.refs.date.value,
+        exercise_id: this.refs.exercise.value,
+        reps: this.refs.reps.value,
+        sets: this.refs.sets.value,
+        weight: this.refs.weight.value
+      }
+    };
 
     fetch(`/api/v1/workouts`, {
       method: 'POST',
@@ -29,11 +29,15 @@ class WorkoutForm extends Component {
       .then(response => {
         if (response.ok) {
           return response;
+          this.props.getWorkouts;
         } else {
           let errorMessage = `${response.status} (${response.statusText})`,
           error = new Error(errorMessage);
           throw(error);
         }
+      })
+      .then(response => {
+        this.props.getExercises();
       });
 
   }
@@ -50,7 +54,7 @@ class WorkoutForm extends Component {
     return (
 
       <div className="form-element center">
-        <form method="post" action="/workouts" >
+        <form onSubmit={this.handleClick} method="post" action="/workouts" >
 
         <input name="authenticity_token" value={this.props.formAuth} type="hidden" />
 
@@ -85,7 +89,7 @@ class WorkoutForm extends Component {
           </div>
         </div>
 
-        <input className="button" type="submit" name="commit" value="Save" onClick={this.handleClick} />
+        <input className="button" type="submit" name="commit" value="Save" />
         </form>
       </div>
     );
