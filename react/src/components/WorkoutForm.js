@@ -54,7 +54,7 @@ class WorkoutForm extends Component {
     return (
 
       <div className="form-element center">
-        <form method="post" action="/workouts" >
+        <form onSubmit={this.handleClick} method="post" action="/workouts" >
 
         <input name="authenticity_token" value={this.props.formAuth} type="hidden" />
 
@@ -89,7 +89,7 @@ class WorkoutForm extends Component {
           </div>
         </div>
 
-        <input className="button" type="submit" name="commit" value="Save" onClick={this.handleClick} />
+        <input className="button" type="submit" name="commit" value="Save" />
         </form>
       </div>
     );
