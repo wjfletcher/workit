@@ -72,17 +72,17 @@ class WorkoutForm extends Component {
         </div>
 
         <div className="row">
-          <div className="field small-12 large-4 columns">
+          <div className="field small-4 large-4 columns">
             <label htmlFor="workout_reps" className="white-text">Reps</label>
             <input type="number" name="workout[reps]" id="workout_reps" ref="reps" required="required" />
           </div>
 
-          <div className="field small-12 large-4 columns">
+          <div className="field small-4 large-4 columns">
             <label htmlFor="workout_sets" className="white-text">Sets</label>
             <input type="number" name="workout[sets]" id="workout_sets" ref="sets" required="required"/>
           </div>
 
-          <div className="field small-12 large-4 columns">
+          <div className="field small-4 large-4 columns">
             <label htmlFor="workout_weight" className="white-text">Weight</label>
             <input type="text" name="workout[weight]" id="workout_weight" ref="weight" required="required"/>
           </div>
