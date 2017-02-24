@@ -5,10 +5,10 @@ class WorkoutForm extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.handleClick = this.handleClick.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleClick(e) {
+  handleSubmit(e) {
     e.preventDefault();
     let fetchBody = {
       workout: {
@@ -29,7 +29,6 @@ class WorkoutForm extends Component {
       .then(response => {
         if (response.ok) {
           return response;
-          this.props.getWorkouts;
         } else {
           let errorMessage = `${response.status} (${response.statusText})`,
           error = new Error(errorMessage);
@@ -54,7 +53,7 @@ class WorkoutForm extends Component {
     return (
 
       <div className="form-element center">
-        <form onSubmit={this.handleClick} method="post" action="/workouts" >
+        <form onSubmit={this.handleSubmit} method="post" action="/workouts" >
 
         <input name="authenticity_token" value={this.props.formAuth} type="hidden" />
 
