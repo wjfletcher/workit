@@ -89,6 +89,7 @@ class App extends Component {
             reps = {exercise.reps}
             sets = {exercise.sets}
             weight = {exercise.weight}
+            getExercises = {this.getExercises}
           />
         );
       });
