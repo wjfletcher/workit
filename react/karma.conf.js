@@ -73,6 +73,8 @@ module.exports = function(config) {
       'coverage'
     ],
 
+    singleRun: true,
+
     // karma-spec-reporter configuration
     specReporter: {
       // remove meaningless stack trace when tests do not pass
