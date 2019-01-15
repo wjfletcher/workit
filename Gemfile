@@ -13,6 +13,7 @@ gem 'omniauth-fitbit'
 gem 'fitgem_oauth2'
 gem 'chartkick'
 gem 'groupdate'
+gem 'sprockets-es6'
 
 
 group :development do
