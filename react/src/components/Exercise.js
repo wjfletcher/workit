@@ -33,12 +33,15 @@ class Exercise extends Component{
 
   render() {
     return(
-      <div>
-        {this.props.name}: {this.props.sets} X {this.props.reps} X {this.props.weight}lbs{' '}
-        <a className="fa fa-pencil-square fa-lg" href={`/workouts/${this.props.id}/edit`}></a>{' '}
-        <button className="fa fa-trash fa-lg" onClick={() => { this.handleDelete(this.props.id) }}></button>
 
-      </div>
+        <tr>
+          <td>{this.props.name}</td>
+          <td>{this.props.sets}</td>
+          <td>{this.props.reps}</td>
+          <td>{this.props.weight}lbs{' '}</td>
+          <td><a className="fa fa-pencil-square fa-lg" href={`/workouts/${this.props.id}/edit`}></a>{' '}
+          <button className="fa fa-trash fa-lg" onClick={() => { this.handleDelete(this.props.id) }}></button></td>
+        </tr>
     )
   }
 };

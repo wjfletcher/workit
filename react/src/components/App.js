@@ -98,7 +98,17 @@ class App extends Component {
         <div>
         <div className="callout workouts">
           <h4>{workoutDate}</h4>
+          <table className="table">
+            <tr>
+              <th className="text-center">Exercise</th>
+              <th className="text-center">Sets</th>
+              <th className="text-center">Reps</th>
+              <th className="text-center">Weight</th>
+              <th className="text-center">Actions</th>
+            </tr>
+
           {exercises}
+          </table>
         </div>
         <br />
         </div>
